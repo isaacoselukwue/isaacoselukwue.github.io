@@ -17,6 +17,29 @@
       rel="stylesheet"
     />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Isaac Oselukwue",
+        "url": "https://isaacoselukwue.github.io",
+        "email": "princeizak@live.com",
+        "telephone": "+447375314265",
+        "jobTitle": "Full-Stack & ML Engineer",
+        "sameAs": [
+          "https://github.com/isaacoselukwue",
+          "https://www.linkedin.com/in/isaacoselukwue/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lincoln",
+          "addressCountry": "GB",
+          "addressRegion": "England"
+        },
+        "description": "Full-stack software engineer specialising in scalable backend systems and edge deployment of machine learning and computer vision applications"
+      }
+    </script>
+
     <style>
       :root {
         --bg-900: #08121f;
@@ -422,9 +445,37 @@
         margin: 28px 0 80px;
       }
 
+      .achievements-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .achievement-bullet {
+        background: linear-gradient(
+          135deg,
+          rgba(46, 196, 182, 0.18),
+          rgba(255, 159, 28, 0.12)
+        );
+        border: 1px solid rgba(46, 196, 182, 0.44);
+        border-radius: 12px;
+        padding: 14px;
+        font-size: 0.95rem;
+        color: #ffffff;
+        line-height: 1.4;
+      }
+
+      .achievement-bullet strong {
+        display: block;
+        font-size: 1.1rem;
+        color: #58e4d8;
+        margin-bottom: 6px;
+      }
+
       .contact-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-columns: 1fr 1fr;
         gap: 16px;
       }
 
@@ -482,7 +533,8 @@
           grid-template-columns: 1fr;
         }
 
-        .accolades {
+        .accolades,
+        .achievements-strip {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
@@ -507,6 +559,7 @@
 
         .project-grid,
         .accolades,
+        .achievements-strip,
         .stat-grid {
           grid-template-columns: 1fr;
         }
@@ -536,6 +589,25 @@
 
     <main>
       <section class="hero">
+        <div class="wrapper">
+          <div class="achievements-strip reveal">
+            <div class="achievement-bullet">
+              <strong>600+ TPS Delivery</strong>
+              Built payment systems handling real-time throughput at scale with
+              78% cost reduction.
+            </div>
+            <div class="achievement-bullet">
+              <strong>ML on Edge</strong>
+              Deployed multimodal perception and computer vision stacks to
+              real-time harvesting robotics.
+            </div>
+            <div class="achievement-bullet">
+              <strong>Fintech at Speed</strong>
+              Delivered core banking features in microservices with saga
+              orchestration and fine-grained permissions.
+            </div>
+          </div>
+        </div>
         <div class="wrapper hero-grid">
           <article class="panel reveal">
             <span class="label">Full-Stack + ML Engineer</span>
@@ -562,6 +634,12 @@
                 target="_blank"
                 rel="noreferrer"
                 >View LinkedIn</a
+              >
+              <a
+                class="btn secondary"
+                href="/cv.md"
+                download="Isaac_Oselukwue_CV.md"
+                >Download CV</a
               >
               <a class="btn secondary" href="mailto:princeizak@live.com"
                 >Email Isaac</a
@@ -611,7 +689,7 @@
         <p class="section-kicker">
           Engineer with hands-on delivery across fintech, robotics, and
           sustainability domains. Strong track record in event-driven systems,
-          high-throughput payments, backend modernization, and edge-optimised ML
+          high-throughput payments, backend modernisation, and edge-optimised ML
           inference under real-world constraints.
         </p>
         <div class="accolades">
@@ -689,7 +767,8 @@
             <p>
               Built data dashboards and geospatial capabilities for
               sustainability research, including habitat overlays and navigation
-              views for hotspot querying.
+              views for hotspot querying with Python visualisation and Tailwind
+              CSS.
             </p>
             <div class="project-meta">
               <span>Lincoln, UK</span><span>May 2025 - Sep 2025</span>
@@ -719,7 +798,7 @@
             <h3>Software Engineer · Sterling Bank</h3>
             <p>
               Scaled NIP services to 600+ TPS with auto-scaling and reduced
-              infrastructure cost by 78% while modernizing SOAP to REST
+              infrastructure cost by 78% whilst modernising SOAP to REST
               middleware.
             </p>
             <div class="project-meta">
@@ -753,7 +832,8 @@
             <strong>Audio.AI</strong>
             <span
               >Implemented audio transcription and summarisation pipelines with
-              Whisper and Deepgram in both .NET and Python.</span
+              Whisper and Deepgram in both .NET and Python, supporting multiple
+              language models and inference backends.</span
             >
           </div>
           <div class="timeline-item">
@@ -814,9 +894,11 @@
             </div>
           </article>
           <article class="panel quote" aria-label="Professional statement">
-            Engineering partner for teams that need scalable backend systems,
-            real-time data and payment reliability, and practical edge AI
-            execution without hype.
+            <strong
+              >Engineering partner for teams that need scalable backend systems,
+              real-time data and payment reliability, and practical edge AI
+              execution without hype.</strong
+            >
           </article>
         </div>
       </section>
