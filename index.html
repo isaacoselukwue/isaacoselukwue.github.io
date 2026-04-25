@@ -422,6 +422,64 @@
         margin: 12px 0 0 0;
       }
 
+      .project-interview-link {
+        display: grid;
+        grid-template-columns: 104px minmax(0, 1fr);
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(7, 22, 36, 0.62);
+        color: var(--ink-100);
+        text-decoration: none;
+        transition:
+          border-color 180ms ease,
+          transform 180ms ease,
+          background 180ms ease;
+      }
+
+      .project-interview-link:hover,
+      .project-interview-link:focus-visible {
+        border-color: rgba(46, 196, 182, 0.62);
+        background: rgba(8, 25, 40, 0.72);
+        transform: translateY(-1px);
+      }
+
+      .project-interview-thumb {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .project-interview-copy {
+        display: grid;
+        gap: 4px;
+      }
+
+      .project-interview-label {
+        color: var(--ink-500);
+        font-size: 0.76rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .project-interview-title {
+        color: var(--ink-100);
+        font-size: 0.92rem;
+        line-height: 1.35;
+        font-weight: 600;
+      }
+
+      .project-interview-cta {
+        color: #8ef6ea;
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
       .timeline {
         display: grid;
         gap: 12px;
@@ -788,11 +846,29 @@
             </p>
             <p class="project-interview">
               <a
+                class="project-interview-link"
                 href="https://youtu.be/gRE4LvqkxW8?si=mdDXArSQoenLNacf&t=243"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ▶ Watch Interview
+                <img
+                  class="project-interview-thumb"
+                  src="https://img.youtube.com/vi/gRE4LvqkxW8/hqdefault.jpg"
+                  alt="Interview thumbnail discussing Isaac Oselukwue's work at Agaricus Robotics"
+                  loading="lazy"
+                />
+                <span class="project-interview-copy">
+                  <span class="project-interview-label"
+                    >Featured Interview</span
+                  >
+                  <span class="project-interview-title"
+                    >Agaricus Robotics: real-time perception work
+                    explained</span
+                  >
+                  <span class="project-interview-cta"
+                    >Watch on YouTube (starts at 4:03)</span
+                  >
+                </span>
               </a>
             </p>
             <div class="project-meta">
