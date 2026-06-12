@@ -2,7 +2,7 @@
 
 **Lincoln, United Kingdom**
 
-Phone: 07375314265 | Email: princeizak@live.com  
+Email: princeizak@live.com  
 LinkedIn: [linkedin.com/in/isaacoselukwue](https://linkedin.com/in/isaacoselukwue)  
 GitHub: [github.com/isaacoselukwue](https://github.com/isaacoselukwue)
 
