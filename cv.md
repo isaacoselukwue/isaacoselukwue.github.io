@@ -93,11 +93,11 @@ September 2024 – September 2025
 
 **Multimodal Vision-Language Modelling** – Fine-tuned ResNet, ViT, BLIP, and Phi-4-based models for feature extraction and visual question answering using LoRA and selective layer freezing; evaluated model behaviour across image-text reasoning tasks
 
-**yolo26-eval** – Training and evaluation pipeline for YOLO26 object detectors with ONNX Runtime inference, served through a Dockerised app
+**yolo26-eval** – Production-grade YOLO26 object detection: exports the model to ONNX and serves it with FastAPI and ONNX Runtime (no PyTorch at runtime), cutting the container from ~2.2 GB to ~350 MB and cold-start to under 2 seconds; uses YOLO26's NMS-free detection head for single-call CPU inference (~96 ms, 13 objects), with a lightweight HTML/Tailwind dashboard and Dockerised deployment on Render
 
 **Audio.AI** – Audio transcription and summarisation solutions using Whisper and Deepgram, with dedicated implementations in .NET and Python
 
-**xdu** – Cross-platform clone of the POSIX `du` disk-usage utility, written in portable C++17
+**xdu** – Cross-platform clone of the POSIX `du` disk-usage estimator in portable C++17, summing real allocated blocks for byte-for-byte parity with GNU `du`; handles hard-link/cycle de-duplication via (device, inode) tracking, a full option set (human-readable sizes, depth limits, globs, thresholds, sorting, JSON/CSV, colour) and a differential test suite against the system `du`
 
 **ILS** – Open-source Integrated Library System using a TCP-based client/server architecture in C++, demonstrating network programming and system design
 

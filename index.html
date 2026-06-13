@@ -1681,10 +1681,15 @@
                 >
               </h3>
               <p>
-                Training and evaluation pipeline for YOLO26 object detectors
-                with ONNX Runtime inference, served through a Dockerised app.
+                Production-grade YOLO26 object detection: exported to ONNX and
+                served with FastAPI + ONNX Runtime — no PyTorch at runtime,
+                cutting the container from ~2.2&nbsp;GB to ~350&nbsp;MB and
+                cold-start under 2&nbsp;s. Single-call inference via YOLO26's
+                NMS-free head.
               </p>
-              <span class="repo-meta">Python · ONNX · Docker</span>
+              <span class="repo-meta"
+                >Python · ONNX Runtime · FastAPI · Docker</span
+              >
             </li>
             <li class="repo">
               <h3>
@@ -1697,9 +1702,11 @@
               </h3>
               <p>
                 Cross-platform clone of the POSIX <code>du</code> disk-usage
-                utility, written in portable C++17.
+                tool in portable C++17 — real allocated-block accounting with
+                byte-for-byte GNU <code>du</code> parity, hard-link/cycle
+                de-duplication, JSON/CSV output and a differential test suite.
               </p>
-              <span class="repo-meta">C++17 · CLI</span>
+              <span class="repo-meta">C++17 · CLI · Cross-platform</span>
             </li>
             <li class="repo">
               <h3>
