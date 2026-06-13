@@ -161,6 +161,11 @@
         display: block;
       }
 
+      code {
+        font-family: var(--mono);
+        font-size: 0.92em;
+      }
+
       h1,
       h2,
       h3 {
@@ -939,7 +944,7 @@
         margin: 0;
         padding: 0;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 0;
         border-top: 1px solid var(--line);
         border-left: 1px solid var(--line);
@@ -1203,8 +1208,8 @@
                 </p>
                 <p class="lede">
                   I build and deploy real-time perception systems — detection,
-                  depth and pose — that run on edge hardware under production
-                  constraints. Six years of backend and payments engineering
+                  segmentation, depth and pose — running on ROS2 and TensorRT at
+                  the edge. Six years of backend and payments engineering
                   underneath it, so the models actually ship.
                 </p>
                 <p class="hero-meta">
@@ -1234,16 +1239,16 @@
                 </div>
                 <ul class="facts">
                   <li>
+                    <span class="n">30 FPS</span
+                    ><span class="l">Real-time perception on Jetson</span>
+                  </li>
+                  <li>
+                    <span class="n">&lt;15ms</span
+                    ><span class="l">Edge inference latency</span>
+                  </li>
+                  <li>
                     <span class="n">600+</span
                     ><span class="l">TPS payments delivered</span>
-                  </li>
-                  <li>
-                    <span class="n">78%</span
-                    ><span class="l">Infra cost reduced</span>
-                  </li>
-                  <li>
-                    <span class="n">Edge</span
-                    ><span class="l">ML running in production</span>
                   </li>
                   <li>
                     <span class="n">6 yrs</span
@@ -1583,25 +1588,58 @@
               </dd>
             </div>
             <div class="stack-row">
-              <dt>ML &amp; Vision</dt>
+              <dt>Computer Vision</dt>
               <dd>
-                <span class="tag">PyTorch</span>
-                <span class="tag">Transformers</span>
                 <span class="tag">YOLO</span>
-                <span class="tag">ONNX / TensorRT</span>
-                <span class="tag">LoRA</span>
+                <span class="tag">RF-DETR</span>
+                <span class="tag">SAM</span>
+                <span class="tag">ResNet</span>
+                <span class="tag">ConvNeXt</span>
+                <span class="tag">Depth Anything v2</span>
+                <span class="tag">DPT</span>
                 <span class="tag">ViT</span>
                 <span class="tag">BLIP</span>
-                <span class="tag">Whisper</span>
-                <span class="tag">Ollama</span>
-                <span class="tag">LLMs</span>
+                <span class="tag">OpenCV</span>
               </dd>
             </div>
             <div class="stack-row">
-              <dt>Systems &amp; Data</dt>
+              <dt>Vision tasks</dt>
+              <dd>
+                <span class="tag">Detection</span>
+                <span class="tag">Segmentation</span>
+                <span class="tag">Classification</span>
+                <span class="tag">Depth estimation</span>
+                <span class="tag">Pose estimation</span>
+                <span class="tag">Tracking</span>
+                <span class="tag">VQA</span>
+              </dd>
+            </div>
+            <div class="stack-row">
+              <dt>ML &amp; MLOps</dt>
+              <dd>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Transformers</span>
+                <span class="tag">LoRA</span>
+                <span class="tag">ONNX</span>
+                <span class="tag">MLflow</span>
+                <span class="tag">Whisper</span>
+                <span class="tag">Ollama</span>
+              </dd>
+            </div>
+            <div class="stack-row">
+              <dt>Robotics &amp; Edge</dt>
+              <dd>
+                <span class="tag">ROS2</span>
+                <span class="tag">TensorRT</span>
+                <span class="tag">NVIDIA Jetson</span>
+                <span class="tag">Edge inference</span>
+                <span class="tag">Docker</span>
+              </dd>
+            </div>
+            <div class="stack-row">
+              <dt>Backend &amp; Data</dt>
               <dd>
                 <span class="tag">FastAPI</span>
-                <span class="tag">ROS2</span>
                 <span class="tag">.NET</span>
                 <span class="tag">Kafka</span>
                 <span class="tag">Redis</span>
@@ -1611,22 +1649,13 @@
               </dd>
             </div>
             <div class="stack-row">
-              <dt>Infra &amp; Tooling</dt>
+              <dt>Tooling</dt>
               <dd>
-                <span class="tag">Azure</span>
-                <span class="tag">Docker</span>
                 <span class="tag">Git</span>
                 <span class="tag">CI/CD</span>
                 <span class="tag">TDD</span>
                 <span class="tag">Microservices</span>
-              </dd>
-            </div>
-            <div class="stack-row">
-              <dt>Frontend</dt>
-              <dd>
-                <span class="tag">React + Vite</span>
-                <span class="tag">Blazor</span>
-                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Azure</span>
               </dd>
             </div>
           </dl>
@@ -1641,18 +1670,36 @@
             <h2>Open Source</h2>
             <span class="sec-meta">github.com/isaacoselukwue</span>
           </div>
-          <ul class="repo-grid" id="repo-grid">
+          <ul class="repo-grid">
             <li class="repo">
               <h3>
                 <a
-                  href="https://github.com/isaacoselukwue/ExtensionsLibrary"
+                  href="https://github.com/isaacoselukwue/yolo26-eval"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >ExtensionsLibrary</a
+                  >yolo26-eval</a
                 >
               </h3>
-              <p>C# library of helper functions for production development.</p>
-              <span class="repo-meta">C# · ★ 3</span>
+              <p>
+                Training and evaluation pipeline for YOLO26 object detectors
+                with ONNX Runtime inference, served through a Dockerised app.
+              </p>
+              <span class="repo-meta">Python · ONNX · Docker</span>
+            </li>
+            <li class="repo">
+              <h3>
+                <a
+                  href="https://github.com/isaacoselukwue/xdu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >xdu</a
+                >
+              </h3>
+              <p>
+                Cross-platform clone of the POSIX <code>du</code> disk-usage
+                utility, written in portable C++17.
+              </p>
+              <span class="repo-meta">C++17 · CLI</span>
             </li>
             <li class="repo">
               <h3>
@@ -1667,7 +1714,7 @@
                 C++ project demonstrating architecture discipline and
                 domain-driven design.
               </p>
-              <span class="repo-meta">C++ · ★ 2</span>
+              <span class="repo-meta">C++ · DDD</span>
             </li>
             <li class="repo">
               <h3>
@@ -1679,7 +1726,7 @@
                 >
               </h3>
               <p>Security-focused C# utility for encryption workflows.</p>
-              <span class="repo-meta">C# · ★ 3</span>
+              <span class="repo-meta">C# · Security</span>
             </li>
           </ul>
         </div>
@@ -1823,76 +1870,6 @@
           // Move keyboard focus to the activated video, not back to <body>.
           iframe.focus();
         });
-      })();
-
-      // Live GitHub repositories (progressive enhancement) -------------------
-      (function () {
-        var grid = document.getElementById("repo-grid");
-        if (!grid) {
-          return;
-        }
-        var username = "isaacoselukwue";
-        fetch(
-          "https://api.github.com/users/" + username + "/repos?per_page=100",
-        )
-          .then(function (res) {
-            return res.ok ? res.json() : null;
-          })
-          .then(function (repos) {
-            if (!Array.isArray(repos) || repos.length === 0) {
-              return;
-            }
-            var top = repos
-              .filter(function (r) {
-                return !r.fork;
-              })
-              .sort(function (a, b) {
-                var diff =
-                  (b.stargazers_count || 0) - (a.stargazers_count || 0);
-                return diff !== 0
-                  ? diff
-                  : new Date(b.updated_at) - new Date(a.updated_at);
-              })
-              .slice(0, 3);
-            // Only replace the curated list when a full row of 3 is available,
-            // so a thin/partial response never degrades the section.
-            if (top.length < 3) {
-              return;
-            }
-            grid.textContent = "";
-            top.forEach(function (repo) {
-              var li = document.createElement("li");
-              li.className = "repo";
-
-              var h3 = document.createElement("h3");
-              var link = document.createElement("a");
-              link.href = repo.html_url;
-              link.target = "_blank";
-              link.rel = "noopener noreferrer";
-              link.textContent = repo.name;
-              h3.appendChild(link);
-
-              var p = document.createElement("p");
-              p.textContent =
-                repo.description ||
-                "Engineering repository — practical, maintainable code.";
-
-              var meta = document.createElement("span");
-              meta.className = "repo-meta";
-              meta.textContent =
-                (repo.language || "Mixed") +
-                " · ★ " +
-                (repo.stargazers_count || 0);
-
-              li.appendChild(h3);
-              li.appendChild(p);
-              li.appendChild(meta);
-              grid.appendChild(li);
-            });
-          })
-          .catch(function () {
-            /* offline or rate-limited — the static fallback list stays */
-          });
       })();
     </script>
   </body>
